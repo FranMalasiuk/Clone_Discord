@@ -1,0 +1,327 @@
+/* Variáveis para facilitar a manutenção */
+:root {
+    --discord-dark: #23272A;
+    --discord-purple: #5865F2;
+    --text-color-light: #F6F6F6;
+    --button-dark-bg: #2C2F33;
+    --button-dark-hover: #36393F;
+    --light-grey-bg-1: #FFF; /* Cor para seções ímpares */
+    --light-grey-bg-2: #F6F6F6; /* Cor para seções pares */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+    background-color: var(--discord-dark); /* Fundo geral do body ainda escuro para áreas fora das seções principais */
+    color: var(--text-color-light); /* Cor de texto padrão para áreas escuras */
+    line-height: 1.6;
+}
+
+/* Estilos de Botões */
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download {
+    background-color: var(--text-color-light);
+    color: var(--discord-dark);
+}
+
+.btn-download:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-browser {
+    background-color: var(--button-dark-bg);
+    color: var(--text-color-light);
+}
+
+.btn-browser:hover {
+    background-color: var(--button-dark-hover);
+}
+
+/* Header Section (Hero) */
+.hero-section {
+    background-image: url('../img/Header.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color-light);
+    padding: 20px;
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.discord-logo {
+    width: 120px; 
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.5rem; 
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.header-buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Sections (Main Content) */
+.section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; 
+}
+
+/* Intercalação das cores de fundo e cor do texto para contraste */
+.section:nth-child(odd) { /* Seções ímpares (1ª, 3ª, 5ª, etc.) */
+    background-color: var(--light-grey-bg-1); /* #F6F6F6 */
+    color: var(--discord-dark); /* Texto escuro para fundo claro */
+}
+.section:nth-child(even) { /* Seções pares (2ª, 4ª, 6ª, etc.) */
+    background-color: var(--light-grey-bg-2); /* #F4F4F4 */
+    color: var(--discord-dark); /* Texto escuro para fundo claro */
+}
+
+
+.section-content {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.section-content.reverse {
+    flex-direction: row-reverse; 
+}
+
+.section-image {
+    max-width: 50%;
+    height: auto;
+    flex-shrink: 0; 
+}
+
+.section-text {
+    flex-grow: 1; 
+}
+
+.section-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-text p {
+    font-size: 1.1rem;
+}
+
+/* ESTILOS PARA A SEÇÃO DE TECNOLOGIA CONFIÁVEL (a imagem da videochamada) */
+.reliable-tech-section {
+    /* Mantém a cor de fundo #F6F6F6 explicitamente, caso sua posição mude ou para garantir */
+    background-color: var(--light-grey-bg-1); 
+    color: var(--discord-dark);
+    text-align: center; 
+    padding-bottom: 0; 
+}
+
+.reliable-tech-section .section-content {
+    flex-direction: column; 
+    gap: 40px;
+}
+
+.reliable-tech-section .section-text {
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.reliable-tech-section .section-text h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem; 
+    line-height: 1.2;
+}
+
+.reliable-tech-section .section-text p {
+    font-size: 1.2rem;
+}
+
+.reliable-tech-section .section-image {
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+}
+/* FIM DOS ESTILOS DA SEÇÃO DE TECNOLOGIA */
+
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: var(--discord-purple);
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--text-color-light); /* Assegura que o texto seja claro nesta seção */
+}
+
+.call-to-action h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: var(--text-color-light);
+}
+
+.call-to-action .btn-download {
+    background-color: var(--text-color-light);
+    color: var(--discord-dark);
+    font-size: 1.2rem;
+    padding: 20px 40px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--button-dark-bg);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-color-light);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .discord-logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+/* ===================================== */
+/* Responsividade (Media Queries) */
+/* ===================================== */
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .section-content,
+    .section-content.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .section-image {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .section-text h2 {
+        font-size: 2rem;
+    }
+
+    .section-text p {
+        font-size: 1rem;
+    }
+
+    /* Responsividade para a nova seção de tecnologia */
+    .reliable-tech-section .section-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .reliable-tech-section .section-text p {
+        font-size: 1.1rem;
+    }
+
+    .reliable-tech-section .section-image {
+        max-width: 90%; 
+    }
+
+    .call-to-action h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 50px 15px;
+    }
+
+    .section-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-text p {
+        font-size: 0.95rem;
+    }
+
+    /* Responsividade para a nova seção de tecnologia em telas menores */
+    .reliable-tech-section .section-text h2 {
+        font-size: 2rem;
+    }
+
+    .reliable-tech-section .section-text p {
+        font-size: 1rem;
+    }
+
+    .call-to-action h2 {
+        font-size: 2rem;
+    }
+
+    .call-to-action .btn-download {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}
